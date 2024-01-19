@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Courses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .course-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-list-item {
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      background-color: #ddd;
+    }
+
+    .sub-courses {
+      display: none;
+      height: auto;
+      background-color: bisque;
+      padding: 20px;
+      text-align: center;
+      margin: 10;
+      border-radius: 50px;
+      border: 10px solid white;
+
+    }
+
+    footer {
+    
+      position: relative;
+      padding: 10px;
+      margin: 0px;
+      bottom: 0;
+      
+
+    }
+    .footer{
+      background-color: #74e2bf;
+      color: rgb(143, 9, 9);
+      text-align: center;
+      font-size: 12px;
+      margin: 0;
+      padding: 10;
+      bottom: 0;
+      margin-top: 1px
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Current Courses</h1>
+  </header>
+
+  <nav>
+    <ul class="course-list">
+      <li class="course-list-item" onclick="toggleSubCourses('CVL244')">CVL244</li>
+      <li class="course-list-item" onclick="toggleSubCourses('CVL342')">CVL342</li>
+      <li class="course-list-item" onclick="toggleSubCourses('CVL381')">CVL381</li>
+      <li class="course-list-item" onclick="toggleSubCourses('CVL212')">CVL212</li>
+      <li class="course-list-item" onclick="toggleSubCourses('CVL443')">CVL443</li>
+      <li class="course-list-item" onclick="toggleSubCourses('MSL303')">MSL303</li>
+      <li class="course-list-item" onclick="toggleSubCourses('HUL271')">HUL271</li>
+    </ul>
+  </nav>
+
+  <section>
+    <div id="CVL244-courses" class="sub-courses">
+      <h2>CVL244 </h2>
+      <ul class="course-list">
+        <li><a href="cvl244 lecture slides/" target="_blank">Lecture slides</a></li>
+        <li><a href="cvl244 Notes" target="_blank">Notes</a></li>
+        <li><a href="cvl244 PYQ" target="_blank">Previous Years Papers</a></li>
+
+      </ul>
+    </div>
+    <div id="CVL342-courses" class="sub-courses">
+      <h2>CVL342 </h2>
+      <ul class="course-list">
+        <li><a href="cvl 342 presentations" target="_blank">Presentations</a></li>
+        <li><a href="cvl342 excel calculations" target="_blank">Excel Calculations</a></li>
+        <li><a href="cvl342 BOOKS/" target="_blank">BOOKS</a></li>
+        <li><a href="cvl244 PYQ" target="_blank">Previous Years Papers</a></li>
+      </ul>
+    </div>
+    <div id="CVL381-courses" class="sub-courses">
+      <h2>CVL381</h2>
+      <ul class="course-list">
+        <li><a href="cvl381 slides/" target="_blank">Lecture slides</a></li>
+        <li><a href="cvl244 Notes" target="_blank">Notes</a></li>
+        <li><a href="cvl244 PYQ" target="_blank">Previous Years Papers</a></li>
+      </ul>
+    </div>
+    <div id="CVL212-courses" class="sub-courses">
+      <h2>CVL212</h2>
+      <ul class="course-list">
+        <li><a href="cvl244 lecture slides/" target="_blank">Lecture slides</a></li>
+        <li><a href="cvl212 notes/" target="_blank">Notes</a></li>
+        <li><a href="cvl212 book/" target="_blank">Book</a></li>
+        <li><a href="cvl212 extra/" target="_blank">Extr</a></li>
+        <li><a href="cvl244 PYQ" target="_blank">Previous Years Papers</a></li>
+      </ul>
+    </div>
+    <div id="CVL443-courses" class="sub-courses">
+      <h2>CVL443</h2>
+      <ul class="course-list">
+        <li><a href="cvl443 slides/" target="_blank">Lecture slides</a></li>
+        <li><a href="cvl443 assignments/" target="_blank">Assignments</a></li>
+        <li><a href="cvl244 PYQ" target="_blank">Previous Years Papers</a></li>
+      </ul>
+    </div>
+    <div id="MSL303-courses" class="sub-courses">
+      <h2>MSL303 </h2>
+      <ul class="course-list">
+        <li><a href="check Gmail" target="_blank">Lecture slides</a></li>
+        <li><a href="check Gmail" target="_blank">Assignments</a></li>
+        <li><a href="check Gmail" target="_blank">Previous Years Papers</a></li>
+      </ul>
+    </div>
+    <div id="HUL271-courses" class="sub-courses">
+      <h2>HUL271</h2>
+      <ul class="course-list">
+        <li><a href="HUL271 slides/" target="_blank">Lecture slides</a></li>
+        <li><a href="HUL271 Read this/" target="_blank">Read this</a></li>
+        <li><a href="coming...." target="_blank">Previous Years Papers</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Repeat the above structure for other courses -->
+  </section>
+  <footer class="footer">
+    <h4>Developed and Maintained by <b>Abhishek Raj</b></h4>
+    <h4>Contact: <a href="tel:8544278701">Call</a></h4>
+    
+    
+  </footer>
+  <script>
+    function toggleSubCourses(courseCode) {
+      const subCoursesElement = document.getElementById(`${courseCode}-courses`);
+      if (subCoursesElement) {
+        subCoursesElement.style.display = (subCoursesElement.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+  </script>
+
+</body>
